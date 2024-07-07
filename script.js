@@ -27,17 +27,9 @@ function renderLibrary() {
 
         listItem.setAttribute('data-index', i);
 
-        const removeButton = document.createElement("button");
-        removeButton.textContent= "Remove";
-        listItem.appendChild(removeButton);
-
-        removeButton.addEventListener('click', function() {
-            const index = listItem.getAttribute('data-index');
-            RemoveBookButton(index);
-        });
-
         const toggleButton = document.createElement("button");
-        toggleButton.textContent = book.read ? "Unread" : "Read";
+        toggleButton.textContent = book.read ? "Read" : "Unread";
+        toggleButton.className = "read-button"
         listItem.appendChild(toggleButton);
 
         toggleButton.addEventListener('click', function() {
@@ -45,6 +37,18 @@ function renderLibrary() {
             renderLibrary();
 
         });
+
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.className = "remove-button"
+        listItem.appendChild(removeButton);
+
+        removeButton.addEventListener('click', function() {
+            const index = listItem.getAttribute('data-index');
+            RemoveBookButton(index);
+        });
+
+
         bookListContainer.appendChild(listItem);
     }
 }
