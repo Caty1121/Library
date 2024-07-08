@@ -22,9 +22,8 @@ function renderLibrary() {
     for (let i = 0; i < library.length; i++) {
         const book = library[i];
         const listItem = document.createElement("li");
-        const bookDetails = `${book.title}, ${book.author}, ${book.numberOfPages} pages, Read: ${book.read}`;
+        const bookDetails = `${book.title}\n${book.author}\n${book.numberOfPages} pages`;
         listItem.textContent = bookDetails;
-
         listItem.setAttribute('data-index', i);
 
         const toggleButton = document.createElement("button");
