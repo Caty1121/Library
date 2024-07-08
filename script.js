@@ -9,7 +9,7 @@ Book.prototype.toggleReadStatus = function() {
     this.read = !this.read;
 };
 
-const book1 = new Book('Sam I am', 'Dr. Suess', '25');
+const book1 = new Book('Sam I am','Dr. Suess', '25');
 const book2 = new Book('Catcher on the Rye', 'JD Salinger', '277');
 const book3 = new Book('Fight Club','Chuck Palanuik','208');
 
@@ -22,7 +22,7 @@ function renderLibrary() {
     for (let i = 0; i < library.length; i++) {
         const book = library[i];
         const listItem = document.createElement("li");
-        const bookDetails = `${book.title}\n${book.author}\n${book.numberOfPages} pages`;
+        const bookDetails = `${book.title} ${book.author} ${book.numberOfPages} pages`;
         listItem.textContent = bookDetails;
         listItem.setAttribute('data-index', i);
 
