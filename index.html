@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="container">
     <form>
         <label for="bname">Book Name:</label><br>
         <input type="text" id="bname" class="field" name="bname"><br>
@@ -16,14 +17,16 @@
         <input type="text" id="pageNums" name="pageNums" class="field"><br>
         <label for="readBook">Read</label><br>
         <input type="checkbox" id="readBook" name="readBook"><br>
+        <button id="add-book-button" onclick="AddBook()"> Add Book </button>
     </form>
-    <button id="add-book-button" onclick="AddBook()"> Add Book </button>
     <br>
-    <ul id="booklist"></ul>
-    <br>
-    <p id="lib"></p>
-    <br>
+ 
+        <ul id="booklist"></ul>
+        <br>
+        <p id="lib"></p>
+        <br>
     <script src="script.js"></script>
+</div>
 
 </body>
 </html>

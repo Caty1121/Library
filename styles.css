@@ -1,22 +1,19 @@
 body {
     font-size: 20px;
-    background-color: rgb(253, 156, 111);
+    background-color: rgb(228, 212, 193);
     font-weight: 700px;
 }
 form {
-    padding-left: 20%;
+padding: 2%;
+background-color: lightseagreen;
 }
-#add-book-button {
-    margin-left: 20%;
-}
+
 #booklist {
     background-color:rgb(57, 152, 120);
-    color:rgb(248, 241, 244);
+    color:rgb(243, 229, 219);
     padding-bottom: 6em;
     padding-right: 4em;
     padding-top: 2em;
-    height: 60px;
-    width: Auto;
     }
 ul {
     display: flex;
@@ -26,10 +23,13 @@ li {
     text-decoration: none;
     padding-right: 2em;
 }
+#container {
+    display: flex;
+}
 
 button {
     border-radius: 30px;
-    background-color: rgb(114, 112, 216);
+    background-color: rgb(236, 137, 107);
     font-weight: 600px;
     font-size: 18px;
     padding: .5em;
@@ -38,10 +38,10 @@ button {
     margin-right: 4px;
 }
 .read-button {
-    background-color: deepskyblue;
+    background-color: rgb(147, 200, 218);
 }
 .remove-button {
-    background-color: crimson;
+    background-color: rgb(214, 129, 157);
     margin-left: 3px;
 }
 #readBook {
@@ -49,6 +49,5 @@ button {
 }
 input {
     height: 30px;
-
     border-radius: 30px;
 }
