@@ -47,7 +47,6 @@ function renderLibrary() {
             RemoveBookButton(index);
         });
 
-
         bookListContainer.appendChild(listItem);
     }
 }
