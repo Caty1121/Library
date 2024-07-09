@@ -22,7 +22,7 @@ function renderLibrary() {
     for (let i = 0; i < library.length; i++) {
         const book = library[i];
         const listItem = document.createElement("li");
-        const bookDetails = `${book.title}\n${book.author}\n${book.numberOfPages} pages`;
+        const bookDetails = `${book.title} By: ${book.author} ${book.numberOfPages} pages`;
         listItem.textContent = bookDetails;
         listItem.setAttribute('data-index', i);
 
@@ -48,6 +48,8 @@ function renderLibrary() {
         });
 
         bookListContainer.appendChild(listItem);
+
+        console.log('Added listItem:', listItem);
     }
 }
 
@@ -58,7 +60,11 @@ function AddBook() {
     const readBook = document.getElementById('readBook').checked;
     const newBook = new Book(bname, aname, pageNums);
     newBook.read = readBook;
+
+    console.log('New Book Created:', newBook);
     library.push(newBook);
+
+    console.log('Library after adding:', library)
 
     renderLibrary();
 }
