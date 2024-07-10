@@ -2,14 +2,34 @@ body {
     font-size: 20px;
     background-color: rgb(250, 249, 248);
     font-weight: 700px;
+    margin: o;
+    background-color:rgb(57, 152, 120);
+    height: 100vh;
+    display: flex;
 }
-form {
+
+p {
+    color: white;
+}
+
+#form-container {
 padding: 2%;
-background-color: lightseagreen;
+background-color: rgb(14, 32, 31);
+width: 60vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+color: white;
+}
+
+
+h1 {
+    color: white;
 }
 
 #booklist {
-    background-color:rgb(57, 152, 120);
     color:rgb(243, 229, 219);
     padding-bottom: 6em;
     padding-right: 4em;
@@ -34,7 +54,6 @@ button {
     font-size: 18px;
     padding: .5em;
     border-color: rgb(15, 1, 1);
-    margin-top: 5px;
     margin-right: 4px;
 }
 .read-button {

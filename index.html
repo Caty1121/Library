@@ -7,23 +7,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form>
-        <label for="bname">Book Name:</label><br>
-        <input type="text" id="bname" name="bname"><br>
-        <label for="aname">Author Name:</label><br>
-        <input type="text" id="aname" name="aname"><br>
-        <label for="pageNums">Number of Pages:</label><br>
-        <input type="text" id="pageNums" name="pageNums"><br>
-        <label for="readBook">Read</label><br>
-        <input type="checkbox" id="readBook" name="readBook"><br>
-    </form>
-    <button id="add-book-button" onclick="AddBook()"> Add Book </button>
-    <br>
-    <ul id="booklist"></ul>
-    <br>
-    <p id="lib"></p>
-    <br>
-    <script src="script.js"></script>
-
+        <div id="container">
+            <div id="form-container">
+                <h1>Library</h1>
+                <p> Enter a new book below:</p>
+            <form>
+                <label for="bname">Book Name:</label><br>
+                <input type="text" id="bname" name="bname"><br>
+                <label for="aname">Author Name:</label><br>
+                <input type="text" id="aname" name="aname"><br>
+                <label for="pageNums">Number of Pages:</label><br>
+                <input type="text" id="pageNums" name="pageNums"><br>
+                <label for="readBook">Read</label><br>
+                <input type="checkbox" id="readBook" name="readBook"><br>
+            </form>
+            <button id="add-book-button" onclick="AddBook()"> Add Book </button>
+        </div>
+        <br>
+        <ul id="booklist"></ul>
+        <br>
+        <p id="lib"></p>
+        <br>
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>
