@@ -13,7 +13,8 @@ p {
 }
 
 #form-container {
-padding: 2%;
+padding: 0 2 2 0;
+margin: 0;
 background-color: rgb(14, 32, 31);
 width: 60vh;
 display: flex;
