@@ -22,24 +22,13 @@ function renderLibrary() {
     for (let i = 0; i < library.length; i++) {
         const book = library[i];
         const listItem = document.createElement("li");
-        const bookDetails = `${book.title} By: ${book.author} ${book.numberOfPages} pages`;
+        const bookDetails = `${book.title}, ${book.author}, ${book.numberOfPages} pages, Read: ${book.read}`;
         listItem.textContent = bookDetails;
+
         listItem.setAttribute('data-index', i);
 
-        const toggleButton = document.createElement("button");
-        toggleButton.textContent = book.read ? "Read" : "Unread";
-        toggleButton.className = "read-button"
-        listItem.appendChild(toggleButton);
-
-        toggleButton.addEventListener('click', function() {
-            book.toggleReadStatus();
-            renderLibrary();
-
-        });
-
         const removeButton = document.createElement("button");
-        removeButton.textContent = "Remove";
-        removeButton.className = "remove-button"
+        removeButton.textContent= "Remove";
         listItem.appendChild(removeButton);
 
         removeButton.addEventListener('click', function() {
@@ -47,9 +36,16 @@ function renderLibrary() {
             RemoveBookButton(index);
         });
 
-        bookListContainer.appendChild(listItem);
+        const toggleButton = document.createElement("button");
+        toggleButton.textContent = book.read ? "Unread" : "Read";
+        listItem.appendChild(toggleButton);
 
-        console.log('Added listItem:', listItem);
+        toggleButton.addEventListener('click', function() {
+            book.toggleReadStatus();
+            renderLibrary();
+
+        });
+        bookListContainer.appendChild(listItem);
     }
 }
 
@@ -60,11 +56,7 @@ function AddBook() {
     const readBook = document.getElementById('readBook').checked;
     const newBook = new Book(bname, aname, pageNums);
     newBook.read = readBook;
-
-    console.log('New Book Created:', newBook);
     library.push(newBook);
-
-    console.log('Library after adding:', library)
 
     renderLibrary();
 }
@@ -75,4 +67,3 @@ function RemoveBookButton(index) {
 }
 
 renderLibrary();
-
